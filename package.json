@@ -30,6 +30,7 @@
         "bluebird": "3.5.0",
         "body-parser": "1.17.1",
         "express": "4.15.2",
+        "method-override": "2.3.8",
         "quark": "1.0.1"
     }
 }

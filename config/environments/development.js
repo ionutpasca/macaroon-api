@@ -3,5 +3,9 @@ module.exports = {
     host: '127.0.0.1',
     app: {
         name: 'Macaroon API'
+    },
+    store: {
+        port: 8081,
+        host: '127.0.0.1'
     }
 };

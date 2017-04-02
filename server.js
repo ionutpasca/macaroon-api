@@ -11,6 +11,12 @@ app.set('config', config);
 app.set('root', __dirname);
 app.set('env', ENV);
 
+// require('./config/express').init(app);
+
+app.use('/', require('./app/routes/main'));
+app.use('/api', require('./app/routes/users'));
+app.use('/api', require('./app/routes/roles'));
+
 app.use((err, req, res, next) => {
     res.status(500).json(err);
 });
