@@ -11,7 +11,7 @@ app.set('config', config);
 app.set('root', __dirname);
 app.set('env', ENV);
 
-// require('./config/express').init(app);
+require('./config/express').init(app);
 
 app.use('/', require('./app/routes/main'));
 app.use('/api', require('./app/routes/users'));

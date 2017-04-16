@@ -4,7 +4,7 @@ const quark = require('quark')();
 const queryExecuter = require('../common/queryExecuter');
 
 function getUsers(req, res, next) {
-    var args = {
+    const args = {
         entity: 'users',
         action: 'get_all'
     };
@@ -13,7 +13,7 @@ function getUsers(req, res, next) {
 
 function getUser(req, res, next) {
     const userId = req.params.userId;
-    var args = {
+    const args = {
         entity: 'users',
         action: 'get_one',
         id: userId
@@ -25,6 +25,17 @@ function createUser(req, res, next) {
     res.json('dsadsa');
 };
 
+function deleteUser(req, res, next) {
+    const userId = req.params.userId;
+    const args = {
+        entity: 'users',
+        action: 'delete',
+        id: userId
+    };
+    queryExecuter.executeQuark(args, res, next);
+};
+
 module.exports.getUsers = getUsers;
 module.exports.getUser = getUser;
 module.exports.createUser = createUser;
+module.exports.deleteUser = deleteUser;
