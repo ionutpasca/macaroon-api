@@ -32,8 +32,8 @@ async function register(req, res, next) {
 	const email = req.body.email;
 	const password = req.body.password;
 	const name = req.body.name;
-	
-	if (!email || !password) {
+
+	if (!email || !password || !name) {
 		return res.status(422);
 	};
 
@@ -45,13 +45,13 @@ async function register(req, res, next) {
 		const user = {
 			email: email,
 			password: password,
-			name: 'IONUT'
+			name: name
 		};
 		const insertUserResponse = await DataExtractor.insertUser(user);
 		const userInfo = setUserInfo(insertUserResponse);
 		res.status(201).json({
 			token: 'JWT ' + generateToken(userInfo),
-			user: userInfo
+			userInfo: userInfo
 		});
 
 	} catch (error) {
