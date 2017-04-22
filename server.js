@@ -6,6 +6,8 @@ const ENV = process.env.NODE_ENV || 'development';
 let server = null;
 const quark = require('quark')();
 
+const passportService = require('./app/middlewares/passport');
+
 let app = express();
 app.set('config', config);
 app.set('root', __dirname);
@@ -14,6 +16,7 @@ app.set('env', ENV);
 require('./config/express').init(app);
 
 app.use('/', require('./app/routes/main'));
+app.use('/api', require('./app/routes/auth'));
 app.use('/api', require('./app/routes/users'));
 app.use('/api', require('./app/routes/roles'));
 

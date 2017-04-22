@@ -1,36 +1,41 @@
 {
-    "name": "macaroon-api",
-    "version": "1.0.0",
-    "description": "",
-    "main": "server.js",
-    "scripts": {
-        "start": "npm-run-all --parallel security-check eslint open",
-        "open": "nodemon server.js",
-        "security-check": "nsp check",
-        "eslint": "eslint **/*.js --ignore-pattern 'node_modules/'",
-        "test": "echo \"Error: no test specified\" && exit 1"
-    },
-    "repository": {
-        "type": "git",
-        "url": "git+https://github.com/ovidiuionut94/macaroon-api.git"
-    },
-    "author": "",
-    "license": "ISC",
-    "bugs": {
-        "url": "https://github.com/ovidiuionut94/macaroon-api/issues"
-    },
-    "homepage": "https://github.com/ovidiuionut94/macaroon-api#readme",
-    "devDependencies": {
-        "eslint": "3.19.0",
-        "gulp": "3.9.1",
-        "nodemon": "1.11.0",
-        "npm-run-all": "^4.0.2"
-    },
-    "dependencies": {
-        "bluebird": "3.5.0",
-        "body-parser": "1.17.1",
-        "express": "4.15.2",
-        "method-override": "2.3.8",
-        "quark": "1.0.1"
-    }
+  "name": "macaroon-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "npm-run-all --parallel security-check eslint open",
+    "open": "nodemon server.js",
+    "security-check": "nsp check",
+    "eslint": "eslint **/*.js --ignore-pattern 'node_modules/'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ovidiuionut94/macaroon-api.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ovidiuionut94/macaroon-api/issues"
+  },
+  "homepage": "https://github.com/ovidiuionut94/macaroon-api#readme",
+  "devDependencies": {
+    "eslint": "3.19.0",
+    "gulp": "3.9.1",
+    "nodemon": "1.11.0",
+    "npm-run-all": "^4.0.2"
+  },
+  "dependencies": {
+    "bluebird": "3.5.0",
+    "body-parser": "1.17.1",
+    "express": "4.15.2",
+    "jsonwebtoken": "7.3.0",
+    "method-override": "2.3.8",
+    "node-async-router": "0.0.2",
+    "passport": "0.3.2",
+    "passport-jwt": "2.2.1",
+    "passport-local": "1.0.0",
+    "quark": "1.0.1"
+  }
 }
