@@ -21,11 +21,11 @@ function userExists(email) {
 	return  queryExecuter.executeQuarkAsPromise(args);
 };
 
-function getOneUser(userId) {
+function getOneUser(queryData) {
 	const args = {
 		entity: 'users',
 		action: 'get_one',
-		id: userId
+		data: queryData
 	};
 	return  queryExecuter.executeQuarkAsPromise(args);
 

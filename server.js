@@ -2,6 +2,7 @@ const express = require('express');
 const http = require('http');
 const config = require('./config/main');
 const ENV = process.env.NODE_ENV || 'development';
+const passport = require('passport');
 
 let server = null;
 const quark = require('quark')();
@@ -14,6 +15,7 @@ app.set('root', __dirname);
 app.set('env', ENV);
 
 require('./config/express').init(app);
+app.use(passport.initialize());
 
 app.use('/', require('./app/routes/main'));
 app.use('/api', require('./app/routes/auth'));
