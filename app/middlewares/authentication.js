@@ -17,7 +17,9 @@ function setUserInfo(user) {
 		id: user.facebook_id ? user.facebook_id : user.id,
 		email: user.email,
 		roles: user.roles,
-		authMethod: user.authMethod ? user.authMethod : 'local'
+		authMethod: user.authMethod ? user.authMethod : 'local',
+		profileImageUrl: user.profile_image_url ? user.profile_image_url : null,
+		name: user.name
 	};
 };
 
