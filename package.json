@@ -32,12 +32,13 @@
     "express": "4.15.2",
     "jsonwebtoken": "7.3.0",
     "method-override": "2.3.8",
-    "node-async-router": "0.0.2",
     "passport": "0.3.2",
     "passport-facebook": "2.1.1",
     "passport-facebook-token": "3.3.0",
     "passport-jwt": "2.2.1",
     "passport-local": "1.0.0",
-    "quark": "1.0.1"
+    "quark": "1.0.1",
+    "winston": "2.3.1",
+    "winston-daily-rotate-file": "1.4.6"
   }
 }
