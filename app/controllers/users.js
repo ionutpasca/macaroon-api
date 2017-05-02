@@ -21,10 +21,6 @@ function getUser(req, res, next) {
     queryExecuter.executeQuark(args, res, next);
 };
 
-function createUser(req, res, next) {
-    res.json('dsadsa');
-};
-
 function deleteUser(req, res, next) {
     const userId = req.params.userId;
     const args = {
@@ -37,5 +33,4 @@ function deleteUser(req, res, next) {
 
 module.exports.getUsers = getUsers;
 module.exports.getUser = getUser;
-module.exports.createUser = createUser;
 module.exports.deleteUser = deleteUser;
