@@ -23,6 +23,7 @@ app.use('/', require('./app/routes/main'));
 app.use('/api', require('./app/routes/auth'));
 app.use('/api', require('./app/routes/users'));
 app.use('/api', require('./app/routes/roles'));
+app.use('/api', require('./app/routes/domains'));
 
 app.use((err, req, res, next) => {
     res.status(500).json(err);

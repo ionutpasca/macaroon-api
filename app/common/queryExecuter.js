@@ -4,6 +4,7 @@ const quark = require('quark')();
 const config = require('../../config/main');
 
 quark.client({ port: config.store.port, hostname: config.store.host }, { entity: 'users' });
+quark.client({ port: config.store.port, hostname: config.store.host }, { entity: 'domains' });
 
 function executeQuark(args, res, next) {
     quark.exec(args, (err, result) => {
