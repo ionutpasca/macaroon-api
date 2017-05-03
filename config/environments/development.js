@@ -1,6 +1,7 @@
 module.exports = {
     port: 8080,
     host: '127.0.0.1',
+    authUsersSocketPort: 8083,
     secret: 'MacAr00nS3cr3t!.{[}]...',
     app: {
         name: 'Macaroon API'

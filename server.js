@@ -3,6 +3,9 @@ const http = require('http');
 const config = require('./config/main');
 const logger = require('./config/winston');
 
+const AuthUsersSocket = require('./app/sockets/authUsersSocket');
+const authUsersSocket = new AuthUsersSocket();
+
 const ENV = process.env.NODE_ENV || 'development';
 const passport = require('passport');
 
@@ -21,8 +24,9 @@ app.use(passport.initialize());
 
 app.use('/', require('./app/routes/main'));
 app.use('/api', require('./app/routes/auth'));
-app.use('/api', require('./app/routes/users'));
+app.use('/api', require('./app/routes/chat'));
 app.use('/api', require('./app/routes/roles'));
+app.use('/api', require('./app/routes/users'));
 app.use('/api', require('./app/routes/domains'));
 
 app.use((err, req, res, next) => {
